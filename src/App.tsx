@@ -10,7 +10,7 @@ const data:Array<PacoteType> = [
   peso: 2.34
 },
 {
-  id: 'dab70d83-9f69-449f-85e5-b28897b84b63',
+  id: '95eee3f6-6308-49de-ba31-78bd43eaaedd',
   largura: 70.0,
   altura: 50.0,
   profundidade: 10.0,
@@ -20,9 +20,9 @@ const data:Array<PacoteType> = [
 export default function App() {
   return (
     <section>
+      <h2>Pacotes</h2>
       <div className="pacotes">
-        <Pacote pacote={data[0]}></Pacote>
-        <Pacote pacote={data[1]}></Pacote>
+        {data.map(p  => <Pacote pacote={p} key={p.id}/>)}
       </div>
     </section>
   )
